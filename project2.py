@@ -6,10 +6,21 @@
 #3. Deposit money
 #4. Withdraw money
 #5. Check balance 
+accountNo = int(0)
+custName = ""
+bCode = ""
+mobileNum = int(0)
 
 def createAccounts():
     accountNum = int(input("Enter your account number: "))
     custName = str(input("Name: "))
-    bCode = int(input("Enter branch code: "))
+    bCode = str(input("Enter branch code: "))
     mobileNum  = int(input("Enter mobile number: "))
+
+def showAccount():
+    print("Account Number: ", accountNum )
+    print("Customer Name: ", custName)
+    print("Branch Code: ", bCode)
+    print("Mobile Number: ", mobileNum)
+
 
