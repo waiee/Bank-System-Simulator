@@ -16,11 +16,17 @@ def createAccounts():
     custName = str(input("Name: "))
     bCode = str(input("Enter branch code: "))
     mobileNum  = int(input("Enter mobile number: "))
+    balance = float(input("Enter current balance: RM"))
 
 def showAccount():
     print("Account Number: ", accountNum )
     print("Customer Name: ", custName)
     print("Branch Code: ", bCode)
     print("Mobile Number: ", mobileNum)
+
+def deposit (amount):
+    balance = balance+amount
+    checkBalance()
+    
 
 
