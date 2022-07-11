@@ -39,14 +39,27 @@ def checkBalance():
     print("Current balance: RM")
 
 #Main function
-print("1. Create account\n 2.Withdraw\n 3. Deposit\n 4.Check Balance")
-userChoice = int(input("Select any option: "))
-if (userChoice == 1):
-    createAccounts()
-elif (userChoice == 2):
-    userInput = int(input("Enter amount to withdraw: RM"))
-    withdraw(userInput)
 
 
+while(userch == 'y'):
+    print("----- Welcome to Bank System Simulator -----")
+    print(" 1. Create account\n 2. Withdraw\n 3. Deposit\n 4. Check Balance\n 5. End Program")
+    userChoice = int(input("Select any option: "))
+    if (userChoice == 1):
+        createAccounts()
+    elif (userChoice == 2):
+        userInput = float(input("Enter amount to withdraw: RM"))
+        withdraw(userInput)
+    elif (userChoice == 3):
+        userInput = float(input("Enter amount to deposit: RM"))
+        deposit(userInput)
+    elif (userChoice == 4):
+        checkBalance()
+    elif (userChoice == 5):
+        break
+    else:
+        print("Please select any options available above.")
+print("\nDo you want to continue? \nPress y to continue \nPress n to end program")
+userch = str(input("Enter you choice: "))
 
 
