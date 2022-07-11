@@ -36,13 +36,13 @@ def withdraw(amount):
     checkBalance()
 
 def checkBalance():
-    print("Current balance: RM")
+    print("Current balance: RM", balance)
 
 #Main function
+userch = 'y'
 
-
-while(userch == 'y'):
-    print("----- Welcome to Bank System Simulator -----")
+while (userch == 'y'):
+    print("\n----- Welcome to Bank System Simulator -----")
     print(" 1. Create account\n 2. Withdraw\n 3. Deposit\n 4. Check Balance\n 5. End Program")
     userChoice = int(input("Select any option: "))
     if (userChoice == 1):
@@ -58,8 +58,10 @@ while(userch == 'y'):
     elif (userChoice == 5):
         break
     else:
-        print("Please select any options available above.")
-print("\nDo you want to continue? \nPress y to continue \nPress n to end program")
-userch = str(input("Enter you choice: "))
-
-
+        print("\nPlease select any options available above.")
+        print("\nDo you want to continue? \nPress y to continue \nPress n to end program")
+        try: 
+            userch = str(input("Enter your choice: "))
+        except NameError or ValueError or TypeError:
+            print("NameError/Value Error/TyperError occured. Some variable isn't defined.")
+print("Ending the simulator...\nProgram end.")
