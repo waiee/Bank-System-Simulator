@@ -6,11 +6,14 @@
 #3. Deposit money
 #4. Withdraw money
 #5. Check balance 
+
+#Variables
 accountNo = int(0)
 custName = ""
 bCode = ""
 mobileNum = int(0)
 
+#Functions
 def createAccounts():
     accountNum = int(input("Enter your account number: "))
     custName = str(input("Name: "))
@@ -27,6 +30,23 @@ def showAccount():
 def deposit (amount):
     balance = balance+amount
     checkBalance()
-    
+
+def withdraw(amount):
+    balance = balance-amount
+    checkBalance()
+
+def checkBalance():
+    print("Current balance: RM")
+
+#Main function
+print("1. Create account\n 2.Withdraw\n 3. Deposit\n 4.Check Balance")
+userChoice = int(input("Select any option: "))
+if (userChoice == 1):
+    createAccounts()
+elif (userChoice == 2):
+    userInput = int(input("Enter amount to withdraw: RM"))
+    withdraw(userInput)
+
+
 
 
