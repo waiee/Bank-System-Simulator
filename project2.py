@@ -19,7 +19,12 @@ def createAccounts():
     custName = str(input("Name: "))
     bCode = str(input("Enter branch code: "))
     mobileNum  = int(input("Enter mobile number: "))
-    balance = float(input("Enter current balance: RM"))
+
+    try:
+        global balance
+        balance = float(input("Enter current balance: RM"))
+    except UnboundLocalError:
+        print("UnboundLocalError occured. Some variable isn't defined.")
 
 def showAccount():
     print("Account Number: ", accountNum )
@@ -28,11 +33,17 @@ def showAccount():
     print("Mobile Number: ", mobileNum)
 
 def deposit (amount):
-    balance = balance+amount
+    try:
+        balance = balance+amount 
+    except UnboundLocalError:
+        print("UnboundLocalError occured. Some variable isn't defined.")
     checkBalance()
 
 def withdraw(amount):
-    balance = balance-amount
+    try:
+        balance = balance-amount 
+    except UnboundLocalError:
+        print("UnboundLocalError occured. Some variable isn't defined.")
     checkBalance()
 
 def checkBalance():
