@@ -19,9 +19,9 @@ def createAccounts():
     custName = str(input("Name: "))
     bCode = str(input("Enter branch code: "))
     mobileNum  = int(input("Enter mobile number: "))
+    global balance
 
     try:
-        global balance
         balance = float(input("Enter current balance: RM"))
     except UnboundLocalError:
         print("UnboundLocalError occured. Some variable isn't defined.")
