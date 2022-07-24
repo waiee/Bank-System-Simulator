@@ -12,6 +12,7 @@ accountNo = int(0)
 custName = ""
 bCode = ""
 mobileNum = int(0)
+global balance
 
 #Functions
 def createAccounts():
@@ -47,7 +48,7 @@ def withdraw(amount):
     checkBalance()
 
 def checkBalance():
-    print("Current balance: RM", balance)
+    print("\nCurrent balance: RM", balance)
 
 #Main function
 userch = 'y'
