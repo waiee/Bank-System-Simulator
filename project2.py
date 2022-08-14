@@ -77,3 +77,6 @@ while (userch == 'y'):
         except NameError or ValueError or TypeError:
             print("NameError/Value Error/TyperError occured. Some variable isn't defined.")
 print("Ending the simulator...\nProgram end.")
+
+print("Hello world")
+print("THIS IS FOR GITHUB COMMIT ONLY")
