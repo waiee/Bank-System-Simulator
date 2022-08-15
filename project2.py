@@ -80,3 +80,5 @@ print("Ending the simulator...\nProgram end.")
 
 print("Hello world")
 print("THIS IS FOR GITHUB COMMIT ONLY")
+print("BISMILLAH")
+print("ESOK NEXG PROJECT")
